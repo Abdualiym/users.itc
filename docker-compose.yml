@@ -36,7 +36,7 @@ services:
     image: mysql:5.7
     restart: unless-stopped
     ports:
-      - 33061:3306
+      - 3306:3306
     volumes:
       - ./docker/storage/mysql:/var/lib/mysql
     environment:
