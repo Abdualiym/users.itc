@@ -1,0 +1,47 @@
+version: '3.7'
+
+services:
+
+  nginx:
+    image: nginx:1.17-alpine
+    container_name: itc-nginx
+    restart: unless-stopped
+    working_dir: /app
+    ports:
+      - 20080:80
+    volumes:
+      - ./:/app
+      - ./docker/nginx:/etc/nginx/conf.d
+    links:
+      - php-fpm
+    depends_on:
+      - php-fpm
+      - db
+
+  php-fpm:
+    build: docker/php-fpm
+    restart: unless-stopped
+    container_name: itc-php
+    working_dir: /app
+    ports:
+      - 9000:9000
+    volumes:
+      - ./:/app
+    links:
+      - db
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    restart: unless-stopped
+    ports:
+      - 33061:3306
+    volumes:
+      - ./docker/storage/mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: itc
+      MYSQL_ROOT_USER: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+      MYSQL_PASSWORD:
+      MYSQL_ROOT_PASSWORD:
