@@ -17,20 +17,30 @@ try {
 <div class="container">
     <form action="" method="POST">
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your email">
+            <label for="formControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="formControlInput1" placeholder="Your email">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput2" class="form-label">First name</label>
-            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Your first name">
+            <label for="formControlInput2" class="form-label">First name</label>
+            <input type="text" class="form-control" id="formControlInput2" placeholder="Your first name">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput3" class="form-label">Last name</label>
-            <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Your last name">
+            <label for="formControlInput3" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="formControlInput3" placeholder="Your last name">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput4" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleFormControlInput4" placeholder="Your password">
+            <label for="formControlInput4" class="form-label">Password</label>
+            <input type="password" class="form-control" id="formControlInput4" placeholder="Your password">
+        </div>
+        <div class="mb-3">
+            <label for="formControlInput5" class="form-label">Department</label>
+            <select class="form-control" id="formControlInput5">
+                <?php
+                foreach ($departments as $department) {
+                    echo '<option value="' . $department['id'] . '">' . $department['name'] . "</option>";
+                }
+                ?>
+            </select>
         </div>
         <input type="submit" class="btn btn-primary" value="Sign up">
     </form>

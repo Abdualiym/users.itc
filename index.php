@@ -13,7 +13,13 @@ define("ENV", "DOCKER");
 
     <?php include "parts/navbar.php"; ?>
 
-    <?php include "views/index.php"; ?>
+    <?php
+    if (isset($_GET['dep_id'])) {
+        include "views/users.php";
+    } else {
+        include "views/departments.php";
+    }
+    ?>
 
     <?php include "parts/footer.php"; ?>
 
