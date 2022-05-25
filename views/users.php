@@ -24,10 +24,14 @@ try {
 
         <div id="accordion">
             <?php
-            if (count($users)){
+            if (count($users)) {
                 foreach ($users as $user) {
-                    echo '<h3>' . $user['first_name'] ." ". $user['last_name'] . "</h3>";
-                    echo "<div> <p>" . $user['id'] . "</p> </div>";
+                    echo '<h3>' . $user['first_name'] . " " . $user['last_name'] . "</h3>";
+                    echo "<div>";
+                    echo "<p>" . $user['id'] . "</p> ";
+                    echo "<p>" . $user['email'] . "</p>";
+                    echo "<p>" . $user['role'] . "</p>";
+                    echo "</div>";
                 }
             } else {
                 echo "<h2>Users not found.</h2>";

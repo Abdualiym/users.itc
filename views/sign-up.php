@@ -14,7 +14,7 @@ if (isset($_POST['dep_id'])) {
     $sql = "INSERT INTO users (first_name, last_name, email, password, department_id, role)
   VALUES ('$firstName', '$lastName', '$email', '$password', '$depId', 'user')";
     if ($conn->exec($sql)) {
-        $flash = "New record created successfully";
+        $flash = "New user added successfully";
     }
 }
 
