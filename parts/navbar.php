@@ -2,7 +2,11 @@
     <a href="/" class="my-0 mr-md-auto font-weight-normal">ITC</a>
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="/">Departments</a>
-        <a class="btn btn-success" href="/login.php">Login</a>
+        <?php if (GUEST) : ?>
+            <a class="btn btn-success" href="/login.php">Login</a>
+            <a class="btn btn-outline-primary" href="/sign-up.php">Sign up</a>
+        <?php else : ?>
+            <a class="btn btn-danger" href="/logout.php">Logout</a>
+        <?php endif; ?>
     </nav>
-    <a class="btn btn-outline-primary" href="/sign-up.php">Sign up</a>
 </div>

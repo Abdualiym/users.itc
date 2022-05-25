@@ -1,8 +1,4 @@
-<?php
-define("ENV", "DOCKER");
-//define("ENV", "OSPANEL");
-
-?>
+<?php include "setup.php"; ?>
 <?php include "db_connect.php"; ?>
 
     <!doctype html>

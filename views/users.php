@@ -28,9 +28,9 @@ try {
                 foreach ($users as $user) {
                     echo '<h3>' . $user['first_name'] . " " . $user['last_name'] . "</h3>";
                     echo "<div>";
-                    echo "<p>" . $user['id'] . "</p> ";
-                    echo "<p>" . $user['email'] . "</p>";
-                    echo "<p>" . $user['role'] . "</p>";
+                    echo "<p>ID: <b>" . $user['id'] . "</b></p> ";
+                    echo "<p>Email: <b>" . $user['email'] . "</b></p>";
+                    echo "<p>Role: <b>" . $user['role'] . "</b></p>";
                     echo "</div>";
                 }
             } else {

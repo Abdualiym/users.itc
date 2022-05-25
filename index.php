@@ -1,8 +1,4 @@
-<?php
-define("ENV", "DOCKER");
-//define("ENV", "OSPANEL");
-
-?>
+<?php include "setup.php"; ?>
 <?php include "db_connect.php"; ?>
 
     <!doctype html>
@@ -17,7 +13,7 @@ define("ENV", "DOCKER");
     if (isset($_GET['dep_id'])) {
         include "views/users.php";
     } else {
-        include "views/departments.php";
+        include "views/departments/index.php";
     }
     ?>
 

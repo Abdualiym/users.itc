@@ -17,13 +17,16 @@ if (isset($_POST['email'])) {
         if ($user[0]['password'] != $password){
             $error = "Incorrect password";
         } else {
-            echo "<h1>Success</h1>";
+            setcookie('logged', 1, time() + 3600);
+            if ($user[0]['role'] == 'admin'){
+                setcookie('admin', 1, time() + 3600);
+            }
+            header("Location: index.php");
         }
     }
 //    echo "<pre>";
 //    print_r($user['password']);
 //    echo "</pre>";
-
 
 }
 
