@@ -32,6 +32,12 @@ services:
     depends_on:
       - db
 
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
   db:
     image: mysql:5.7
     restart: unless-stopped
@@ -43,5 +49,5 @@ services:
       MYSQL_DATABASE: itc
       MYSQL_ROOT_USER: root
       MYSQL_ALLOW_EMPTY_PASSWORD: "true"
-      MYSQL_PASSWORD:
-      MYSQL_ROOT_PASSWORD:
+      MYSQL_PASSWORD: "root"
+      MYSQL_ROOT_PASSWORD: "root"

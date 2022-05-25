@@ -1,12 +1,7 @@
 <?php
 $username = "root";
-if (ENV === "DOCKER") {
-    $password = "";
-    $host = "db";
-} else {
-    $password = "root";
-    $host = "localhost";
-}
+$password = "root";
+$host = ENV === "DOCKER" ? "db" : "localhost";
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=itc", $username, $password);

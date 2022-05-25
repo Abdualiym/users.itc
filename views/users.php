@@ -1,22 +1,15 @@
+
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Deparments</h1>
+    <h1 class="display-4">Users</h1>
 </div>
 
 <div class="container">
 
-    <nav class="nav flex-column">
-        <a class="nav-link active" aria-current="page" href="#">Active</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link disabled">Disabled</a>
-    </nav>
-
-
     <div class="card-deck mb-3 text-center">
         <script>
-            $( function() {
-                $( "#accordion" ).accordion();
-            } );
+            $(function () {
+                $("#accordion").accordion();
+            });
         </script>
 
         <div id="accordion">
@@ -67,14 +60,6 @@
                 </p>
             </div>
         </div>
-
-
-
-
-
-
-
-
 
 
     </div>
