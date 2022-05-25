@@ -1,13 +1,18 @@
 <?php
 $username = "root";
-$password = "";
+if (ENV === "DOCKER") {
+    $password = "";
+    $host = "db";
+} else {
+    $password = "root";
+    $host = "localhost";
+}
 
 try {
-    $conn = new PDO("mysql:host=localhost;dbname=itc;charset=utf8mb4;port=3306", $username);
+    $conn = new PDO("mysql:host=$host;dbname=itc", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully";
 } catch (Exception $e) {
-    echo "Connection failed: " . $e->getMessage();
+    echo "Connection failed: " . $e->getMessage() . $e->getTraceAsString();
 }
 
 ?>

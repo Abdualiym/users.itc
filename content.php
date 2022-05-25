@@ -4,21 +4,12 @@
 
 <div class="container">
 
-    <ul class="list-group">
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            A list item
-            <span class="badge bg-primary rounded-pill">14</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            A second list item
-            <span class="badge bg-primary rounded-pill">2</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-            A third list item
-            <span class="badge bg-primary rounded-pill">1</span>
-        </li>
-    </ul>
-
+    <nav class="nav flex-column">
+        <a class="nav-link active" aria-current="page" href="#">Active</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link disabled">Disabled</a>
+    </nav>
 
 
     <div class="card-deck mb-3 text-center">
