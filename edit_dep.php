@@ -9,7 +9,7 @@
 
     <?php include "parts/navbar.php"; ?>
 
-    <?php include "views/sign-up.php"; ?>
+    <?php include "views/departments/edit.php"; ?>
 
     <?php include "parts/footer.php"; ?>
 

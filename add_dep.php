@@ -1,5 +1,5 @@
-<?php include "setup.php"; ?>
-<?php include "db_connect.php"; ?>
+<?php include "parts/setup.php"; ?>
+<?php include "parts/db_connect.php"; ?>
 
     <!doctype html>
     <html lang="en">
@@ -9,7 +9,7 @@
 
     <?php include "parts/navbar.php"; ?>
 
-    <?php include "views/departments/add_dep.php"; ?>
+    <?php include "views/departments/add.php"; ?>
 
     <?php include "parts/footer.php"; ?>
 

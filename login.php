@@ -1,5 +1,5 @@
-<?php include "setup.php"; ?>
-<?php include "db_connect.php"; ?>
+<?php include "parts/setup.php"; ?>
+<?php include "parts/db_connect.php"; ?>
 
     <!doctype html>
     <html lang="en">

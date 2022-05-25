@@ -1,5 +1,5 @@
-<?php include "setup.php"; ?>
-<?php include "db_connect.php"; ?>
+<?php include "parts/setup.php"; ?>
+<?php include "parts/db_connect.php"; ?>
 
     <!doctype html>
     <html lang="en">
@@ -11,7 +11,7 @@
 
     <?php
     if (isset($_GET['dep_id'])) {
-        include "views/users.php";
+        include "views/users/users.php";
     } else {
         include "views/departments/index.php";
     }
